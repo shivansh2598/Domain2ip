@@ -1,0 +1,20 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "it is a domain to ip convertor website",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "child_process": "^1.0.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "node-cmd": "^3.0.0",
+    "node-run-cmd": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shivansh sinha",
+  "license": "ISC"
+}

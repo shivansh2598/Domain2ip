@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Domain to ip convertor</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <center>
+        <br><br>
+    <div>
+        <label>Enter Domain Name</label>
+    <input type="text" placeholder="Enter Domain Name" id='input'  />
+    <button class="btn btn-danger" onclick="find()">Submit</button>
+    </div>
+    <br><br>
+
+    <p id='aa'></p>
+
+    </center>
+
+    <script type='text/javascript'>
+       var find = ()=>{
+           console.log(document.getElementById('input').value)
+       axios.post('http://localhost:7005/',{
+            value:document.getElementById('input').value   
+       })
+       .then((response)=>{
+           document.getElementById('aa').innerText=`${response.data}`
+       })
+       }
+    </script>
+</body>
+</html>
