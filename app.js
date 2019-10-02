@@ -27,8 +27,11 @@ app.post('/',(req,res)=>{
   
 })
 
+
+
 app.get('/',(req,res)=>{
    res.send("Hello world baby")
 })
+
 
 app.listen(PORT)
