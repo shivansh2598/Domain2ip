@@ -15,14 +15,12 @@ app.use(cors())
 const { execFile } = require('child_process');
 
 app.post('/',(req,res)=>{
-  console.log(req.body.value)
   var name =req.body.value
   const child = execFile('nslookup', [`${name}`], (error, stdout, stderr) => {
     if (error) {
       throw error;
     }
     else {
-      console.log(stdout)
     res.send(stdout)
     }
   });
